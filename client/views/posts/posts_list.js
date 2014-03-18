@@ -17,8 +17,6 @@
     }
 ];*/
 
-
-
 Template.postsList.helpers({
     //replacing postsData below with dynamic collection from db
     //posts: postsData
