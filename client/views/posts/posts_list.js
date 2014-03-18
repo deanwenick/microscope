@@ -1,4 +1,5 @@
-var postsData = [
+//static data used to show concept of data context
+/*var postsData = [
     {
         title: 'Introducing Telescope',
         author: 'Sacha Grief',
@@ -14,8 +15,15 @@ var postsData = [
         author: 'Tom Coleman',
         url: 'http://themeteorbook.com'
     }
-];
+];*/
+
+
 
 Template.postsList.helpers({
-    posts: postsData
+    //replacing postsData below with dynamic collection from db
+    //posts: postsData
+
+    posts: function() {
+        return Posts.find();
+    }
 });
