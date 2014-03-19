@@ -9,3 +9,6 @@ preserve-inputs
 bootstrap
 iron-router
 spin
+accounts-ui-bootstrap-dropdown
+accounts-password
+accounts-facebook
