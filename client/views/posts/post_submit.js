@@ -7,8 +7,18 @@ Template.postSubmit.events({
             title: $(e.target).find( '[ name=title ]' ).val(),
             author: $(e.target).find( '[ name=author ]' ).val()
         };
+        alert(post.url);
 
-        post._id = Posts.insert(post);
-        Router.go( 'postPage', post );
+        //first way of inserting new post
+        //post._id = Posts.insert(post);
+
+        Meteor.call('post', post, function(error, id) {
+            alert("meteor call here" + id);
+            if (error)
+                return alert('e ' + error.reason);
+
+        Router.go( 'postPage', {_id: id} );
+        });
+
     }
 });
