@@ -15,7 +15,7 @@ Posts.allow({
 
 Posts.deny({
     update: function(userId, post, fieldNames){
-        //may only edit these three fields:
+        //may only edit these three fields:'title', 'author', 'url'
         return (_.without(fieldNames, 'title', 'author', 'url').length > 0);
     }
 });

@@ -6,6 +6,6 @@ Template.postItem.helpers({
     },
 
     ownPost: function() {
-        return this.userId === Meteor.userId();
+        return this.userId == Meteor.userId();
     }
 });
