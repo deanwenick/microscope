@@ -15,6 +15,7 @@ Template.errors.helpers({
     }
 });
 
+//make note that error has been seen when template rendered
 Template.error.rendered = function() {
     var error = this.data;
     Meteor.defer(function() {

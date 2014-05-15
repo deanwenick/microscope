@@ -33,7 +33,7 @@ Meteor.methods({
         if (!postAttributes.title)
             throw new Meteor.Error(422, "Please list the title");
 
-        //check for previos posts with same link
+        //check for previous posts with same link
         if (postAttributes.url && postWithSameLink) {
             throw new Meteor.Error(302, "This link has already been posted", postWithSameLink._id);
         }
