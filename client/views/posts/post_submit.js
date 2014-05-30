@@ -15,7 +15,7 @@ Template.postSubmit.events({
             if (error) {
                 //return alert(error.reason); old way
                 //display error to the user
-                throwError(error.reason);
+                Errors.throw(error.reason);
                 if (error.error === 302)
                     router.go('postPage', {_id: error.details});
             } else {
