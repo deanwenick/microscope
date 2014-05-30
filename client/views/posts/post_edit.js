@@ -6,11 +6,10 @@ Template.postEdit.events({
 
         var postProperties = {
             title: $(e.target).find( '[name=title]' ).val(),
-            author: $(e.target).find( '[name=author]' ).val(),
             url: $(e.target).find( '[name=url]' ).val()
         };
 
-        Posts.update(currentPostId, {$set: postProperties}, function (e, error) {
+        Posts.update(currentPostId, {$set: postProperties}, function (error) {
             if (error) {
                 alert(error.reason);
             } else {
