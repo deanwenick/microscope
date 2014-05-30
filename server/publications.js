@@ -10,3 +10,8 @@ Meteor.publish( 'userData', function() {
         this.ready();
     }
 });
+
+Meteor.publish( 'comments', function() {
+    return Comments.find();
+});
+
