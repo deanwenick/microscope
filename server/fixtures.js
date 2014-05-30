@@ -15,6 +15,7 @@ if (Posts.find().count() === 0) {
         title: 'Introducing Telescope',
         userId: sacha._id,
         author: sacha.profile.name,
+        contributer: "The Author",
         url: 'http://sachagreif.com/introducing-telescope',
         submitted: now - 7 * 3600 * 1000
     });
